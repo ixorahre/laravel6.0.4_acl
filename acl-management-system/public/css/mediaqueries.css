@@ -1,0 +1,145 @@
+/* ----------- 0 - 450px ----------- */
+@media screen and (max-width: 450px) {
+
+
+}
+
+
+/* ----------- 650px - 950px ----------- */
+@media screen and (min-width: 500px) and (max-width: 912px) {
+
+    .input-with-icon i {
+        position: absolute;
+        left: 80%;
+        top: -2px;
+        padding: 15px 12px;
+        margin-right: 10px;
+        color: #aaa;
+        z-index: 1998;
+    }
+
+}
+
+/* ----------- 950px - 1200px ----------- */
+@media screen and (min-width: 912px) and (max-width: 1200px) {
+
+    .input-with-icon i {
+        position: absolute;
+        left: 80%;
+        top: -2px;
+        padding: 15px 12px;
+        margin-right: 10px;
+        color: #aaa;
+        z-index: 1998;
+    }
+
+}
+
+/* ----------- 1200px + ----------- */
+@media screen and (min-width: 1201px) {
+    .input-with-icon i {
+        position: absolute;
+        left: 85%;
+        top: -2px;
+        padding: 15px 12px;
+        margin-right: 10px;
+        color: #aaa;
+        z-index: 1998;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!* ----------- 0 - 450px ----------- *!*/
+/*@media screen and (max-width: 450px) {*/
+
+
+/*}*/
+
+/*!* ----------- 450 - 650px ----------- *!*/
+/*@media screen and (min-width: 451px) and (max-width: 650px) {*/
+
+
+/*}*/
+
+/*!* ----------- 650px - 950px ----------- *!*/
+/*@media screen and (min-width: 651px) and (max-width: 950px) {*/
+
+/*    .input-with-icon i {*/
+/*        position: absolute;*/
+/*        left: 155px;*/
+/*        top: -2px;*/
+/*        padding: 15px 12px;*/
+/*        margin-right: 10px;*/
+/*        color: #aaa;*/
+/*        z-index: 1998;*/
+/*    }*/
+
+/*}*/
+
+/*!* ----------- 950px - 1200px ----------- *!*/
+/*@media screen and (min-width: 951px) and (max-width: 1200px) {*/
+
+/*    .input-with-icon i {*/
+/*        position: absolute;*/
+/*        left: 155px;*/
+/*        top: -2px;*/
+/*        padding: 15px 12px;*/
+/*        margin-right: 10px;*/
+/*        color: #aaa;*/
+/*        z-index: 1998;*/
+/*    }*/
+
+/*}*/
+
+/*!* ----------- 1200px + ----------- *!*/
+/*@media screen and (min-width: 1201px) {*/
+
+
+/*}*/
+
+/*@media screen and (max-height: 767px) {*/
+
+
+/*}*/

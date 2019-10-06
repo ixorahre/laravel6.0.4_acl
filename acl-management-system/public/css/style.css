@@ -1,0 +1,2528 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+
+/* mixins */
+/* base */
+.clearfix {
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.hide_ {
+    text-indent: -9999px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+}
+
+.left, .right {
+    float: left;
+    padding: 10px 0;
+}
+
+.W1 {
+    width: 240px;
+}
+
+.W2 {
+    width: 480px;
+}
+
+.W3 {
+    width: 720px;
+}
+
+.W4 {
+    width: 960px;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    color: #000;
+    background-color: #FFF;
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q, blockquote {
+    quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #000;
+}
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+
+p {
+    font-size: 12px;
+    padding: 10px;
+}
+
+div span.red,
+p span.red {
+    color: #c60025;
+}
+
+div.boxType1 {
+    margin: 2px 0;
+    padding: 16px 0;
+}
+
+div.boxType1 p {
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+div.boxType2 {
+    margin: 0;
+    padding: 30px 0;
+    border: 1px solid white;
+    text-align: center;
+}
+
+div.boxType2 input {
+    margin: 0 10px;
+    border-radius: 0;
+}
+
+div.boxType2 a {
+    margin: 0 10px;
+    line-height: 1.5;
+}
+
+div.boxType3 {
+    padding: 30px 0;
+    background-color: #f1f1f1;
+    border: 1px solid #5a5a5a;
+    color: #000;
+}
+
+div.boxType3 h2 {
+    font-size: 26px;
+    text-align: center;
+    line-height: 2em;
+}
+
+div.boxType3 h3 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 2em;
+}
+
+div.boxType3 p {
+    text-align: center;
+    color: black;
+    line-height: 1.5;
+}
+
+div.boxType3 p a {
+    color: black;
+}
+
+div.boxType3 p.red {
+    color: #c60025;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.boxType3 p.margin50 {
+    margin: 50px 0;
+}
+
+div.boxType3 p.size18 {
+    font-size: 18px;
+}
+
+div.boxType3 p.aLeft {
+    text-align: left;
+}
+
+div.textBox {
+    text-align: left;
+    padding: 20px;
+}
+
+div.textBox h3 {
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+div.textBox h4 {
+    font-size: 13px;
+    padding: 4px;
+}
+
+div.textBox p {
+    color: #ccc;
+    line-height: 1.5em;
+}
+
+div.textBox p strong {
+    color: #fff;
+    font-weight: bold;
+}
+
+div.textBox p a {
+    color: #fff;
+}
+
+div.textBox p span {
+    font-size: 10px;
+    color: #aaa;
+}
+
+div.textBox2 {
+    padding: 20px;
+}
+
+div.textBox2 h3 {
+    font-size: 26px;
+    padding: 10px 0;
+}
+
+div.textBox2 p {
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+div.textBox2 p span {
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.4em;
+}
+
+div#member_add_box em {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+div#member_add_box p {
+    padding: 10px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: none;
+    color: black;
+    width: 100%;
+}
+
+table tr.topborder {
+    border-top: 1px solid #ccc;
+}
+
+table tr.bottomborder {
+    border-bottom: 1px solid #ccc;
+}
+
+table tr.leftborder {
+    border-left: 1px solid #ccc;
+}
+
+table tr.rightborder {
+    border-right: 1px solid #ccc;
+}
+
+table th, table td {
+    vertical-align: top;
+}
+
+table th {
+    padding: 0 14px;
+    background-color: #eeeeee;
+}
+
+table td {
+    padding: 0 5px;
+}
+
+table td.blank {
+    height: 20px;
+    background-color: black;
+}
+
+table th.w40, table td.w40 {
+    width: 40%;
+}
+
+table th.w20, table td.w20 {
+    width: 20%;
+}
+
+table th.pointTitle, table td.pointTitle {
+    padding: 4px;
+    background-color: #ccc;
+    color: #000;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+table td.pointValue {
+    background-color: #fff !important;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+}
+
+#point table th.w40, table td.w30 {
+    border-right: 1px solid #ddd;
+}
+
+select {
+    color: #000;
+    height: 27px;
+    font-size: 100%;
+    padding: 5px 50px 5px 5px;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: .01px;
+    text-overflow: "";
+    background: #eee url(../img/common/bt_pulldown.png) no-repeat right;
+}
+
+/* 20180625 y.nakamura IE10以上対策 add */
+select::-ms-expand {
+    display: none;
+}
+/* 20180625 y.nakamura IE10以上対策 end */
+
+/* each */
+#wrapper {
+    background-color: #FFF;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #FFF;
+}
+
+#container h2.pagetitle {
+    margin: 30px 0 10px 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.3em;
+}
+
+#container h2.pagetitle span {
+    font-size: 16px;
+}
+
+#pageTop {
+    text-align: right;
+    margin-bottom: -4px;
+}
+
+a.btn_red_small {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 12px 25px 12px 25px;
+    background-color: #cc0033;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    outline: none;
+}
+
+a.btn_red_large {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+    background-color: #cc0033;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    outline: none;
+}
+
+a.btn_white_middle {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0px 12px 0px;
+    background-color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+a.btn_gray_middle {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0px 12px 0px;
+    background-color: #999999;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+
+a.btn_gray_small {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+    background-color: #AAA;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+a.btn_black_middle {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0px 12px 0px;
+    background-color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    outline: none;
+}
+
+a.btn_black_large {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+    background-color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    outline: none;
+}
+
+a.btn_gray {
+    background-color: #666;
+}
+
+/* header */
+#header {
+    width: 100%;
+    border-bottom: solid 4px silver;
+}
+
+#header .header_area {
+    width: 960px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+#header .header_area h1 {
+    width: 105px;
+    float: left;
+}
+
+#header .header_area h1 a {
+    width: 105px;
+    height: 74px;
+    display: block;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-image: url("../img/common/headerlogo.png");
+}
+
+#header .header_area div#gNav {
+    float: right;
+    margin: 25px 0 0 0;
+    padding: 0;
+}
+
+#header .header_area div#gNav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#header .header_area div#gNav ul li {
+    float: left;
+    margin-left: 30px;
+}
+
+#header .header_area div#gNav ul li a.textlink {
+    display: block;
+    font-size: 14px;
+    padding: 12px 0px 12px 0px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+/* footer */
+#footer {
+    border-top: 40px solid #000;
+    margin: 30px 0 0 0;
+    padding: 0 0 20px 0;
+    color: black;
+    background-color: #e4e4e4;
+}
+
+
+#footer #footerMenu {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#footer #footerMenu div.left {
+    float: left;
+    margin-bottom: 30px;
+    padding-left: 5%;
+}
+
+#footer #footerMenu div.left ul li {
+    float: left;
+    margin-right: 30px;
+}
+
+#footer #footerMenu div.left ul li a {
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+#footer #footerMenu div.right {
+    float: right;
+    margin-bottom: 30px;
+}
+
+#footer #footerMenu div.right ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+#footer #footerMenu div.right ul li a {
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+#gFooter {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#gFooter p.snsmenu {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1;
+}
+
+#gFooter ul {
+    width: 320px;
+    margin-left: 330px;
+}
+
+#gFooter ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+#gFooter p.copyright {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1;
+}
+
+/* top keyvisual */
+#visualcontainer {
+    width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#topLayouts {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#topLayouts div.left {
+    width: 710px;
+    height: 461px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-align: left;
+    background: url("../img/top/first-bg.png") no-repeat 0 -15px;
+}
+
+#topLayouts div.left h2 {
+    padding-top: 15px;
+}
+
+#topLayouts div.left h3 img {
+    margin: 35px 0 0 0;
+}
+
+#topLayouts div.left p {
+    margin: 35px 0 35px 0;
+    width: 250px;
+    padding: 0px;
+}
+
+#topLayouts .left .main-lead {
+    width: 100%;
+    margin: 0;
+    line-height: 1.75;
+}
+
+/* top Loginbox */
+#tab_black {
+    width: 60px;
+    margin-left: 15px;
+    margin-bottom: 1px;
+    padding: 7px 0px 7px 0px;
+    background-color: black;
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+}
+
+#tab_gray {
+    width: 60px;
+    margin-left: 15px;
+    margin-bottom: 1px;
+    padding: 7px 0px 7px 0px;
+    background-color: #cccccc;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+#tab_black p,
+#tab_gray p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#topLayouts div.right {
+    width: 250px;
+    height: 461px;
+    margin-top: 30px;
+    padding: 0px;
+    text-align: left;
+}
+
+#loginBox {
+    margin: 0;
+    padding: 22px;
+    background-color: black;
+}
+
+#loginBoxGray {
+    margin: 0;
+    padding: 22px;
+    background-color: #ccc;
+}
+
+#loginBox p,
+#loginBoxGray p {
+    margin: 0;
+    padding: 0 0 5px 0;
+    color: white;
+    font-size: 16px;
+}
+
+#loginBox p.resetmail a {
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#loginBox p.autologin {
+    padding: 10px 0 10px 0;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 15px;
+}
+
+#loginBox input.text {
+    width: 190px;
+    height: 20px;
+    background-color: #3e3e3e;
+    border: 0;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#loginBox input.text:focus {
+    background-color: #666666;
+}
+
+#loginBox input.check {
+    background-color: #fff;
+}
+
+#loginBox p.loginbtn {
+    text-align: center;
+}
+
+#loginBox p.error {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #cc0033;
+    text-align: center;
+    line-height: 1.5em;
+    color: #fff;
+    font-weight: bold;
+}
+
+#loginBox p.error span {
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+#loginBoxGray p.loginstatus {
+    border: 4px solid #999;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 1.5em;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#loginBoxGray p.loginstatus span.message {
+    font-size: 12px;
+}
+
+#loginBoxGray p.loginbtn {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#loginBoxGray p.e-shop {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+/* top ValueInfo */
+#ValueInfo {
+    width: 100%;
+    background-color: #eee;
+}
+
+#ValueInfo div.banner_area {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#ValueInfo div.banner_area p.left {
+    float: left;
+    padding: 30px 0 30px 0;
+}
+
+#ValueInfo div.banner_area p.right {
+    float: right;
+    padding: 30px 0 30px 0;
+}
+
+/* top EnterBtn */
+#EnterBtn {
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 0;
+}
+
+#EnterBtn p {
+    width: 340px;
+    margin: 0 auto;
+}
+
+#EnterBtn p a {
+    font-size: 21px;
+}
+
+/* Form Design */
+#registForm h1 {
+    font-size: 28px;
+    padding: 10px 0 0;
+    text-align: center;
+    line-height: 180%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#registForm .error,
+#mypage .error {
+    background-color: #c60025;
+}
+
+#registForm .error p span.message,
+#mypage .error p span.message {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+#registForm div.title,
+#mypage div.title {
+    padding: 15px 0 0 0;
+    font-weight: bold;
+}
+
+/*
+#registForm #card_change div.title,
+#mypage #card_change div.title {
+	padding: 12px 0 0;
+}
+*/
+#registForm div.title span,
+#mypage div.title span {
+    font-weight: normal;
+}
+
+#registForm div.title p,
+#mypage div.title p {
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+#registForm div.center,
+#mypage div.center {
+    margin: 0 auto;
+    width: 320px;
+    padding: 14px 0 !important;
+}
+
+#registForm div.value,
+#mypage div.value {
+    padding: 10px 15px;
+}
+
+#registForm div.value p,
+#mypage div.value p {
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 4px 0;
+}
+
+#registForm div.value span,
+#mypage div.value span {
+    font-size: 11px;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+#registForm div.value span.normal,
+#mypage div.value span.normal {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+#registForm div.value span.bold,
+#mypage div.value span.bold {
+    font-weight: bold;
+}
+
+#registForm div.value input,
+#mypage div.value input {
+    padding: 3px;
+    height: 20px;
+    font-size: 14px;
+    border: none;
+    background-color: #eee;
+}
+
+#registForm div.value input:active,
+#mypage div.value input:active {
+    background-color: #ccc;
+    border: none;
+}
+
+#registForm div.value input.radio,
+#mypage div.value input.radio {
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+    padding: 0;
+    background-color: #fff;
+    border: 0;
+}
+
+#registForm div.value input.check,
+#mypage div.value input.check {
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+    padding: 0;
+    background-color: #fff;
+    border: 0;
+    float: left;
+}
+
+#registForm div.submit,
+#mypage div.submit {
+    width: 600px;
+    margin: 0 auto;
+    border: 5px solid #ccc;
+    padding: 80px;
+    text-align: center;
+}
+
+#registForm div.submit span,
+#mypage div.submit span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#registForm div.submit label,
+#mypage div.submit label {
+    font-size: 14px;
+}
+
+#registForm div.value div.zip,
+#mypage div.value div.zip {
+    float: left;
+}
+
+#registForm div.value div.zip span,
+#mypage div.value div.zip span {
+    line-height: 2.4em;
+}
+
+#registForm div.value div.button,
+#mypage div.value div.button {
+    margin: 0 0 0 10px;
+}
+
+#registForm div.value p.mailmagazine,
+#mypage div.value p.mailmagazine {
+    font-size: 12px;
+    float: left;
+    padding: 8px;
+}
+
+#registForm div.value input.autoAddress,
+#mypage div.value input.autoAddress {
+    width: 110px;
+    height: 26px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: #999;
+    font-size: 12px;
+    color: #fff;
+}
+
+#registForm div.value p.info span,
+#mypage div.value p.info span {
+    font-weight: bold;
+    margin: 0;
+}
+
+#registForm div.value p.confirm,
+#mypage div.value p.confirm {
+    font-size: 12px;
+    padding: 5px 0;
+    line-height: 1.5;
+}
+
+#registForm th.error,
+#mypage th.error {
+    padding: 16px 0;
+    width: 900px;
+}
+
+#registForm th.error p,
+#mypage th.error p {
+    color: white;
+    padding: 0 10px;
+}
+
+#registForm div.value input.typeA {
+    width: 64px;
+}
+
+#registForm div.value input.typeB {
+    width: 100px;
+}
+
+#registForm div.value input.typeC {
+    width: 130px;
+}
+
+#registForm div.value input.typeD {
+    width: 360px;
+}
+
+#registForm div.value input.typeE {
+    width: 620px;
+}
+
+#registForm div.value input.typeF {
+    width: 240px;
+}
+
+#registForm div.value p.term {
+    font-size: 12px;
+    float: left;
+    padding: 8px;
+}
+
+#registForm div.value p.term a {
+    color: black;
+}
+
+#registForm div.value p.info {
+    padding: 10px;
+}
+
+/* 2014 08  Old Class */
+#socialBox {
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+
+#socialBox div.row {
+    border-bottom: 1px solid white;
+}
+
+#socialBox div.row div.left, #socialBox div.row div.right {
+    float: left;
+    text-align: center;
+}
+
+#socialBox div.row div.left {
+    border-right: 1px solid white;
+    width: 158px;
+}
+
+#socialBox div.row div.left ul {
+    padding: 0 7px;
+}
+
+#socialBox div.row div.left ul li {
+    float: left;
+    padding: 4px;
+}
+
+#socialBox div.row div.right {
+    width: 79px;
+}
+
+#socialBox div.row div.right img.bookmark {
+    padding: 4px;
+}
+
+#subMenu ul li {
+    padding: 8px 0;
+}
+
+#pageTitle {
+    padding-bottom: 14px;
+}
+
+#pageTitle h1 {
+    font-size: 150%;
+    padding: 10px 0 0;
+}
+
+/* MyPage Left Menu */
+#mypage div.left ul#menu {
+    margin-bottom: 30px;
+}
+
+#mypage div.left ul#menu li a {
+    position: relative;
+    display: block;
+    padding: 10px 25px 10px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#mypage div.left ul#menu li a:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#mypage div.left ul#menu li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#mypage div.left ul#menu li a:hover:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#mypage div.left ul#logout {
+    margin-bottom: 5px;
+}
+
+#mypage div.left ul#logout li a {
+    position: relative;
+    display: block;
+    padding: 10px 25px 10px 10px;
+    background-color: #888;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+#mypage div.left ul#logout li a:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#mypage div.left ul#logout li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#mypage div.left ul#logout li a:hover:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#mypage div.left ul#secede {
+    margin-bottom: 10px;
+}
+
+#mypage div.left ul#secede li a {
+    position: relative;
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px 25px 10px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#mypage div.left ul#secede li a:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#mypage div.left ul#secede li a:hover {
+    border: 1px solid #ccc;
+    background-color: #000;
+    color: #fff;
+}
+
+#mypage div.left ul#secede li a:hover:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* MyPage Right Contents */
+#mypage div.right {
+    width: 690px;
+    padding: 8px 0 8px 30px;
+}
+
+#mypage div.right div#pointstatus {
+    border: 5px solid #888;
+    margin: 0 0 30px 0;
+    padding: 8px 0 8px 30px;
+    text-align: center;
+}
+
+#mypage div.right div#pointstatus p.pointscore {
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+#mypage div.right div#pointstatus p.pointscore span.scorefield {
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    padding: 0 0 30px 0;
+}
+
+#mypage div.right div#pointstatus p.pointscore span.efont01 {
+    vertical-align: middle;
+    margin: 0 10px 0 10px;
+    font-size: 38px;
+    color: #C4102E;
+    letter-spacing: 0.2em;
+}
+
+#mypage div.right div#pointstatus p.pointday {
+    margin: 20px 0 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#mypage div.right div#cardinfo {
+    margin: 0 0 30px 0;
+    padding: 30px;
+    text-align: center;
+    background-color: #eee;
+}
+
+#mypage div.right div#cardinfo p {
+    line-height: 1.5em;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#mypage div.right div#cardinfo p a {
+    width: 250px;
+    margin-left: 150px;
+    padding: 12px 30px 12px 30px;
+    font-size: 16px;
+}
+
+div#information {
+    border: 5px solid #ccc;
+    margin: 0px 0 30px 0;
+    padding: 15px 0 15px 0px;
+    text-align: center;
+}
+
+div#information h2 {
+    margin: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+div#information p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+div#information p.bold {
+    font-weight: bold;
+}
+
+#mypage div.right div#information p.efont01 {
+    font-size: 21px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+#mypage div.right div#information p.efont01 a {
+    text-decoration: none;
+}
+
+#mypage div.right div#information .red {
+    color: #c60025;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#mypage div.right div#information .red_nml {
+    color: #c60025;
+    font-weight: bold;
+    text-align: center;
+}
+
+#mypage div.right div#information .size18 {
+    font-size: 18px;
+    line-height: 1.3333;
+}
+
+#mypage div.right p.margin50 {
+    margin: 50px 0;
+}
+
+#mypage div.right .boxType2 {
+    overflow: hidden;
+    width: 460px;
+    margin: auto;
+}
+
+#mypage div.right .boxType2_2 {
+    overflow: hidden;
+    width: 200px;
+    margin: auto;
+}
+
+#mypage div.right .boxType2 .submit_btn,
+#mypage div.right .boxType2_2 .submit_btn {
+    float: left;
+}
+
+#mypage div.right .boxType2 .submit_btn a,
+#mypage div.right .boxType2_2 .submit_btn a {
+    display: block;
+    margin-left: 0;
+}
+
+#mypage div.right div#caution {
+    border: 1px solid #c00;
+    background: #fee;
+    margin: 30px 0 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#mypage div.right div#caution p {
+    font-size: 12px;
+    line-height: 1.3333;
+}
+
+/* delete 2014 08
+#mypage div.right table {
+	margin-bottom: 40px;
+}
+#mypage div.right table tr td {
+	text-align:left;
+	height: 50px;
+}
+*/
+#mypage div.right table th.dottedTop, #mypage div.right table td.dottedTop {
+    border-bottom: 0;
+}
+
+#mypage div.right table th.dottedBottom, #mypage div.right table td.dottedBottom {
+    border-top: 1px dotted black;
+}
+
+#mypage div.right table tr td.black {
+    background-color: black;
+    padding-right: 0;
+    padding-bottom: 0;
+    height: auto;
+}
+
+#mypage div.right table tr td.black p {
+    padding-right: 0;
+    padding-bottom: 0;
+    color: white;
+    text-align: right;
+}
+
+#mypage div.right p.submit_btn a {
+    width: 200px;
+    margin-left: 245px;
+}
+
+/* delete 2014 08
+#mypage div.right div.value p {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+*/
+#mypage div.right div.value p span.bold14 {
+    font-size: 14px;
+    vertical-align: baseline;
+}
+
+#mypage div.right div.value p span.bold16 {
+    font-size: 16px;
+    vertical-align: baseline;
+}
+
+#mypage div.right div.value p span.bold21 {
+    font-size: 21px;
+    vertical-align: baseline;
+}
+
+#mypage div.right div.value p span.bold30 {
+    font-size: 30px;
+}
+
+#mypage div.right div.link {
+    text-align: right;
+}
+
+#mypage div.right div.link p {
+    padding-right: 0;
+    padding-top: 0;
+}
+
+#mypage div.right div.boxType2 p.center {
+    font-size: 17px;
+    line-height: 1.8em;
+}
+
+#mypage div.right div.boxType2 p.tleft {
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+#mypage div.right div.boxType2 p.tleft span.f12 {
+    font-size: 12px;
+}
+
+#mypage div.right div.boxType2 p.tleft span.f14 {
+    font-size: 14px;
+}
+
+#mypage div.right div#registForm p.mailmagazine {
+    font-size: 12px;
+    float: left;
+    padding: 8px;
+}
+
+#mypage div.right div#registForm p.confirm {
+    text-align: left;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+#point table {
+    margin-bottom: 0 !important;
+}
+
+#point table tr td {
+    height: auto !important;
+    background-color: #eee;
+}
+
+#point p {
+    font-size: 14px;
+}
+
+#point p.num {
+    font-size: 18px;
+}
+
+#point p.center {
+    text-align: center;
+}
+
+#point p.title {
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#point p.right {
+    width: 100%;
+    text-align: right;
+}
+
+#point p.minus {
+    color: #0066CC;
+}
+
+#point p.point {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#point div.paging {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+#point div.paging a {
+    display: block;
+}
+
+#point div.paging a.left {
+    float: left;
+}
+
+#point div.paging a.right {
+    float: right;
+}
+
+/* top merit  */
+#variousLayouts #merit div {
+    float: left;
+    margin: 20px 49px 20px 0;
+    padding: 0 0 20px 0;
+    width: 286px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5em;
+    background-color: #eeeeee;
+}
+
+#variousLayouts #merit div span {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+#variousLayouts #merit div img {
+    margin-bottom: 15px;
+}
+
+#variousLayouts #merit div hr {
+    border: 1px solid #999999;
+    margin: 20px 0 20px 110px;
+    width: 66px;
+}
+
+/*
+#variousLayouts #merit div.3colright{
+	margin-right:0px;
+}
+*/
+#variousLayouts #meritcircle,
+#variousLayouts #meritcircle2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#variousLayouts #meritcircle h2,
+#variousLayouts #meritcircle2 h2 {
+    border-left: 5px solid #000;
+    margin: 0px 0px 15px 0px;
+    padding: 8px 0px 8px 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#variousLayouts #meritcircle div,
+#variousLayouts #meritcircle2 div {
+    float: left;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+}
+#variousLayouts #meritcircle div.meritcircletext,
+#variousLayouts #meritcircle2 div.meritcircletext {
+    width: 236px;
+    height: 236px;
+    padding: 0;
+    background-image: url("../img/top/bg_merit_circle.png");
+    text-align: center;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+#variousLayouts #meritcircle div.meritcircletext h3,
+#variousLayouts #meritcircle2 div.meritcircletext h3 {
+    border-bottom: 1px solid #000;
+    width: 40px;
+    padding: 0 0 10px 0;
+    margin: 30px 0 20px 98px;
+    font-family: 'efont01';
+    font-size: 30px;
+}
+#variousLayouts #meritcircle div.meritdirect,
+#variousLayouts #meritcircle2 div.meritdirect {
+    padding: 116px 5px 0 5px;
+}
+
+#variousLayouts #meritcircle2 {
+    margin-bottom: 60px;
+}
+#variousLayouts #meritcircle2 div.meritcircletext {
+    font-size: 14px;
+    line-height: 1.2;
+}
+#variousLayouts #meritcircle2 div.meritcircletext .small {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: normal;
+}
+#variousLayouts #meritcircle2 div.meritcircletext.fs-l {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+#variousLayouts #meritcircle2 div.meritcircletext.fs-l h3 {
+    line-height: 1.2;
+}
+#variousLayouts #meritcircle2 .info {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#variousLayouts #pointstep h2 {
+    border-left: 5px solid #000;
+    margin: 0px 0px 15px 0px;
+    padding: 8px 0px 8px 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#variousLayouts #pointstep p.pointsteptext {
+    border: 5px solid #999;
+    width: 700px;
+    margin: 0 0 15px 120px;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#variousLayouts #pointstep p.pointsteptext span {
+    border-right: 1px solid #000;
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
+    font-family: 'efont01';
+    font-size: 16px;
+}
+
+#variousLayouts #pointstep p.pointdirect {
+    margin: 0 0 15px 470px;
+    padding: 0 0 0 0;
+}
+
+#variousLayouts #pointstep ul {
+    margin: 25px 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#variousLayouts #pointstep li {
+    margin-bottom: 15px;
+    padding: 0 0 0 0;
+    font-size: 14px;
+}
+
+/* FAQ  */
+#faq div.article h2 {
+    border-left: 5px solid #000;
+    margin: 0px 0px 15px 0px;
+    padding: 8px 0px 8px 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#faq div.article ul.shortcuts {
+    margin: 0px 0px 30px 0px;
+    padding: 0;
+    font-size: 13px;
+}
+
+#faq div.article ul.shortcuts li {
+    margin: 0px 0px 15px 0px;
+}
+
+#faq div.article ul.faqbox {
+    border: 1px solid #ccc;
+    margin: 0px 0px 30px 0px;
+    padding: 0;
+}
+
+#faq div.article ul.faqbox li {
+    font-size: 14px;
+}
+
+#faq div.article ul.faqbox li a {
+    color: #f00;
+}
+
+#faq div.article ul.faqbox li.qst {
+    padding: 20px 10px 20px 60px;
+    font-weight: bold;
+    background: transparent url(../img/article/icon_faq_q.png) no-repeat 20px 10px;
+    background-color: #eee;
+}
+
+#faq div.article ul.faqbox li.asw {
+    padding: 17px 10px 20px 60px;
+    line-height: 1.5em;
+    font-weight: normal;
+    background: transparent url(../img/article/icon_faq_a.png) no-repeat 20px 10px;
+    background-color: #fff;
+}
+
+#faq div.article ul.faqbox ul.disc {
+    list-style-type: disc;
+    padding: 15px 10px 5px 20px;
+}
+
+#faq div.article ul.faqbox ul.indent li {
+    padding: 15px 10px 5px 20px;
+}
+
+#faq div.article ul.faqbox ul li.aster {
+    font-size: 12px;
+}
+
+#faq div.article div.pageTpp {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+/* RULES  */
+#rules div.article h2 {
+    border-left: 5px solid #000;
+    margin: 0px 0px 15px 0px;
+    padding: 8px 0px 8px 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#rules div.article h3 {
+    margin: 0px 0px 15px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#rules div.article h3 span {
+    color: #c60025;
+}
+
+#rules div.article .preface {
+    padding: 0 0  15px;
+    font-size: 14px;
+}
+
+#rules .article p {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#rules div.article ol {
+    padding: 0 0 20px 0;
+}
+
+#rules div.article ol li {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5em;
+    padding: 0 0 10px 2px;
+}
+
+#rules .article ol li ol,
+#rules .article ol li ul {
+    padding: 10px 10px 0;
+}
+
+#rules .article ol li ol li,
+#rules .article ol li ul li {
+    font-size: 14px;
+    padding: 0 0 10px 2px;
+}
+
+#rules .article ol li ol li p,
+#rules .article ol li ul li p {
+    padding: 8px 0;
+}
+
+#rules .article ol li ol li p.store,
+#rules .article ol li ul li p.store {
+    padding: 8px 16px;
+}
+
+#rules .article ol li ol li.disc,
+#rules .article ol li ul li.disc {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#rules .article p.bottom {
+    padding-top: 40px;
+}
+
+#rules .article p.taRight {
+    text-align: right;
+}
+
+#rules div.article div.pageTpp {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+#rules #paginate p a {
+    color: black;
+    font-size: 16px;
+}
+
+#rules #paginate p.prev {
+    float: left;
+}
+
+#rules #paginate p.next {
+    float: right;
+}
+
+/* privacy  */
+#privacy .title {
+    background-color: #000;
+    margin: 0 0 10px;
+    padding: 5px 0;
+    text-align: left;
+}
+
+#privacy .title p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#privacy div.article h2 {
+    border-left: 5px solid #000;
+    margin: 0px 0px 15px 0px;
+    padding: 8px 0px 8px 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#privacy div.article h3 {
+    margin: 0px 0px 15px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#privacy div.article h3 span {
+    color: #c60025;
+}
+
+#privacy div.article .preface {
+    padding: 0 0  15px;
+    font-size: 14px;
+}
+
+#privacy .article p {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#privacy div.article ol {
+    padding: 0 0 20px 0;
+}
+
+#privacy div.article ol li {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5em;
+    padding: 0 0 10px 2px;
+}
+
+#privacy .article ol li ol,
+#privacy .article ol li ul {
+    padding: 10px 10px 0;
+}
+
+#privacy .article ol li ol li,
+#privacy .article ol li ul li {
+    font-size: 14px;
+    padding: 0 0 10px 2px;
+}
+
+#privacy .article ol li ol li p,
+#privacy .article ol li ul li p {
+    padding: 8px 0;
+}
+
+#privacy .article ol li ol li p.store,
+#privacy .article ol li ul li p.store {
+    padding: 8px 16px;
+}
+
+#privacy .article ol li ol li.disc,
+#privacy .article ol li ul li.disc {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#privacy .article p.bottom {
+    padding-top: 40px;
+}
+
+#privacy .article p.taRight {
+    text-align: right;
+}
+
+#privacy div.article div.pageTpp {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+#privacy #paginate p a {
+    color: black;
+    font-size: 16px;
+}
+
+#privacy #paginate p.prev {
+    float: left;
+}
+
+#privacy #paginate p.next {
+    float: right;
+}
+
+/* top old clas  */
+#variousLayouts #mainArea div.left {
+    width: 665px;
+}
+
+#variousLayouts #mainArea div.left p {
+    padding: 10px 4px;
+    line-height: 2.1em;
+}
+
+#variousLayouts #mainArea div.right {
+    padding: 30px 0;
+}
+
+#variousLayouts #mainArea div.right #map_canvas {
+    width: 294px;
+    height: 204px;
+}
+
+#variousLayouts #mainArea div.right p {
+    padding: 8px 0;
+}
+
+#variousLayouts .section {
+    padding: 24px 0;
+}
+
+#variousLayouts #merit div.left, #variousLayouts #merit div.right {
+    padding: 0;
+    width: 468px;
+    height: 186px;
+}
+
+#variousLayouts #merit div.left p, #variousLayouts #merit div.right p {
+    margin-top: 70px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#variousLayouts #merit div.left {
+    margin-right: 12px;
+}
+
+#variousLayouts #merit div.right {
+    margin-left: 12px;
+}
+
+#variousLayouts #merit div.left02 {
+    clear: both;
+    padding-top: 24px;
+}
+
+#variousLayouts #merit div.text p {
+    clear: both;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#variousLayouts #merit_student div.left, #variousLayouts #merit_student div.right {
+    padding: 0;
+    width: 468px;
+    height: 126px;
+}
+
+#variousLayouts #merit_student div.left p, #variousLayouts #merit_student div.right p {
+    margin-top: 70px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#variousLayouts #meri_studentt div.left {
+    margin-right: 12px;
+}
+
+#variousLayouts #merit_student div.right {
+    margin-left: 18px;
+}
+
+#variousLayouts #merit_student div.left02 {
+    clear: both;
+    padding-top: 24px;
+}
+
+#variousLayouts #merit_student div.text p {
+    clear: both;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#variousLayouts .section h3 {
+    padding: 6px 10px;
+    border: 1px solid white;
+    font-size: 14px;
+}
+
+#variousLayouts .section #circle {
+    padding: 24px 42px 0 42px;
+}
+
+#variousLayouts .section #circle div {
+    float: left;
+    height: 242px;
+    background-repeat: no-repeat;
+}
+
+#variousLayouts .section #circle div p {
+    margin-top: 72px;
+}
+
+#variousLayouts .section #circle div.c1 {
+    width: 318px;
+    background-image: url("../img/top/student/circle1.png");
+}
+
+#variousLayouts .section #circle div.c1 p {
+    margin-left: 8px;
+}
+
+#variousLayouts .section #circle div.c1 p.c1_p {
+    text-align: left;
+    padding-left: 35px;
+    margin-top: 90px;
+}
+
+#variousLayouts .section #circle div.c2 {
+    width: 318px;
+    background-image: url("../img/top/student/circle2.png");
+}
+
+#variousLayouts .section #circle div.c2 p {
+    margin-left: 10px;
+}
+
+#variousLayouts .section #circle div.c3 {
+    width: 240px;
+    background-image: url("../img/top/student/circle3.png");
+}
+
+#variousLayouts .section #circle div.c3 p {
+    margin-left: 10px;
+}
+
+#variousLayouts .section #circle div.c1_student {
+    width: 318px;
+    background-image: url("../img/top/student/circle1.png");
+}
+
+#variousLayouts .section #circle div.c1_student p {
+    margin-top: 88px;
+    margin-left: 20px;
+}
+
+#variousLayouts .section #circle div.c1 p.c1_p_student {
+    text-align: left;
+    padding-left: 35px;
+    margin-top: 90px;
+}
+
+#variousLayouts .section #circle div.c2_student {
+    width: 318px;
+    background-image: url("../img/top/student/circle2.png");
+}
+
+#variousLayouts .section #circle div.c2_student p {
+    margin-left: 40px;
+}
+
+#variousLayouts .section #circle div.c3_student {
+    width: 240px;
+    background-image: url("../img/top/student/circle3.png");
+}
+
+#variousLayouts .section #circle div.c3_student p {
+    margin-left: 25px;
+}
+
+#variousLayouts .section div.left {
+    width: 600px;
+}
+
+#variousLayouts .section div.left p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8em;
+}
+
+#variousLayouts .section div.left ul {
+    padding: 0 10px;
+}
+
+#variousLayouts .section div.left ul li {
+    padding: 2px 0;
+    font-size: 13px;
+    margin-left: 1em;
+    text-indent: -1em;
+}
+
+#variousLayouts .section div.right {
+    margin-left: 28px;
+}
+
+#variousLayouts .section div.right div {
+    padding-bottom: 10px;
+}
+
+#articleLayouts {
+    background-color: white;
+    color: black;
+    padding: 30px 36px;
+    margin-bottom: 30px;
+}
+
+#articleLayouts #categories {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+#articleLayouts #categories ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#articleLayouts #categories ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#articleLayouts #paginate p a {
+    color: black;
+    font-size: 16px;
+}
+
+#articleLayouts #paginate p.prev {
+    float: left;
+}
+
+#articleLayouts #paginate p.next {
+    float: right;
+}
+
+#articleLayouts .article {
+    padding: 10px 0;
+}
+
+#articleLayouts .article h1 {
+    background-color: black;
+    color: white;
+    margin-bottom: 30px;
+    padding: 14px 20px;
+}
+
+#articleLayouts .article h1 p {
+    padding: 0 20px;
+    font-size: 22px;
+    border-left: 10px solid white;
+    line-height: 1.1em;
+}
+
+#articleLayouts .article h2 {
+    height: 35px;
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-indent: 1.6em;
+    line-height: 1.6em;
+    background-image: url("../img/article/h2img.png");
+    background-repeat: no-repeat;
+}
+
+#articleLayouts .article h3 {
+    margin: 15px 0 6px 0;
+    padding: 5px 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#articleLayouts .article h3 span {
+    color: #c60025;
+}
+
+#articleLayouts .article p {
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+#articleLayouts .article p a {
+    color: black;
+}
+
+#articleLayouts .article p.preface {
+    padding: 0 20px 20px 20px;
+}
+
+#articleLayouts .article p.bottom {
+    padding-top: 40px;
+}
+
+#articleLayouts .article p.taRight {
+    text-align: right;
+}
+
+#articleLayouts .article a {
+    color: #c60025;
+}
+
+#articleLayouts .article ol {
+    padding: 0 10px;
+}
+
+#articleLayouts .article ol li {
+    font-size: 12px;
+    padding: 0 0 10px 2px;
+    line-height: 1.5em;
+}
+
+#articleLayouts .article ol li p {
+    padding: 8px 0;
+}
+
+#articleLayouts .article ol li ol, #articleLayouts .article ol li ul {
+    padding: 10px 10px 0 10px;
+}
+
+#articleLayouts .article ol li ol li, #articleLayouts .article ol li ul li {
+    font-size: 12px;
+    padding: 0 0 10px 2px;
+}
+
+#articleLayouts .article ol li ol li p, #articleLayouts .article ol li ul li p {
+    padding: 8px 0;
+}
+
+#articleLayouts .article ol li ol li p.store, #articleLayouts .article ol li ul li p.store {
+    padding: 8px 16px;
+}
+
+#articleLayouts .article ol li ol li.disc, #articleLayouts .article ol li ul li.disc {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#articleLayouts .article ul {
+    padding: 10px;
+}
+
+#articleLayouts .article ul li {
+    font-size: 14px;
+}
+
+#articleLayouts .article ul li span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#articleLayouts .article ul li.qst {
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
+
+#articleLayouts .article ul li.qst span {
+    color: #c60025;
+}
+
+#articleLayouts .article ul li.asw {
+    margin-bottom: 20px;
+}
+
+#articleLayouts .article ul li.asw ul {
+    margin-left: 20px;
+    padding: 10px 20px;
+    list-style-position: outside;
+}
+
+#articleLayouts .article ul li.asw ul li {
+    padding: 4px 0;
+    line-height: 1.2em;
+}
+
+#articleLayouts .article ul li.asw ul li.aster {
+    padding: 0;
+    color: #666;
+    font-size: 12px;
+    margin-left: 1em;
+    text-indent: -1em;
+}
+
+#articleLayouts .article ul li.asw ul.disc {
+    list-style-type: disc;
+}
+
+#articleLayouts .article ul li.asw ul.indent {
+    margin-left: 0;
+    padding-left: 22px;
+}
+
+#articleLayouts .article ul li.asw ul.indent li {
+    padding: 6px 0;
+}
+
+#articleLayouts .article ul li.asw ul.indent li.img {
+    padding: 12px 20px;
+}
+
+#articleLayouts .article ul li.asw ol.deci {
+    margin-left: 20px;
+    padding: 10px 20px;
+    list-style-type: decimal;
+    list-style-position: outside;
+}
+
+#articleLayouts .article ul li.asw ol.deci li {
+    padding: 4px 0;
+    line-height: 1.2em;
+}
+
+#articleLayouts .article ul.shortcuts {
+    padding: 2px 0 40px 0;
+}
+
+#articleLayouts .article ul.shortcuts li {
+    margin: 6px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#articleLayouts .article ul.shortcuts li a {
+    color: black;
+}
+
+#articleLayouts .article ul.shortcuts li a:hover {
+    color: #c60025;
+}
+
+#articleLayouts .article ul.shortcuts li span {
+    margin-right: 10px;
+    color: #c60025;
+}
+
+#articleLayouts .article .pageTpp {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+/* marge parts */
+#incentive {
+    width: 920px;
+    padding: 20px;
+    background: white;
+    color: black;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#incentive p {
+    padding: 0 0 10px 0;
+    font-size: 12px;
+}
+
+#incentive div p.left {
+    padding: 0 67px 10px 117px;
+}
+
+#mypage #point table p {
+    font-size: 14px;
+}
+
+.error_term {
+    color: #c60025;
+    padding: 0;
+}
+
+/* Web Font */
+/*
+@font-face {
+font-family: 'efont01';
+src: url('/test/Oswald/Oswald-Regular.ttf');
+}
+*/
+.efont01 {
+    font-family: 'efont01';
+}
+
+#pointstep .point-info {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 5px solid #ccc;
+}
+#pointstep .point-info-l {
+    float: left;
+}
+#pointstep .point-info-r {
+    float: right;
+}
+#pointstep .point-info-r.pdr {
+    padding-right: 80px;
+}
+#pointstep h3 {
+    display: inline-block;
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #999;
+}
+#pointstep h4 {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    padding-left: 8px;
+    border-left: 5px solid #999;
+}
+#pointstep p {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+#pointstep .icon-arrow {
+    margin-right: 5px;
+}
